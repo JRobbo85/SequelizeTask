@@ -7,7 +7,11 @@ const app = async (yargsObject) => {
 try{
     await sequelize.sync();
     if (yargsObject.create){
-        
+        await createMovie({
+            title: yargsObject.title, 
+            actor: yargsObject.actor, 
+            director: yargsObject.director})
+            
     }
     else if (yargsObject.read){
 
