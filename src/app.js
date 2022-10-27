@@ -77,7 +77,7 @@ try{
         }
     }
 
-    if (yargsObject.createUser){
+    else if (yargsObject.createUser){
         await createUser({
             name: yargsObject.name, 
             age: yargsObject.age })
